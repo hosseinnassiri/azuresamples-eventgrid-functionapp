@@ -81,7 +81,7 @@
     {
       "type": "Microsoft.EventGrid/systemTopics/eventSubscriptions",
       "apiVersion": "2021-06-01-preview",
-      "name": "[concat(parameters('systemTopicName'), '/', parameters('eventSubName'))]",
+      "name": "[parameters('eventSubName')]",
       "dependsOn": [
         "[resourceId('Microsoft.EventGrid/systemTopics', parameters('systemTopicName'))]",
         "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageName'))]",
