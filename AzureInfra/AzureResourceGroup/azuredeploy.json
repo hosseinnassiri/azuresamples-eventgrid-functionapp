@@ -67,7 +67,7 @@
     },
     {
       "type": "Microsoft.EventGrid/systemTopics",
-      "apiVersion": "2021-06-01-preview",
+      "apiVersion": "2020-04-01-preview",
       "name": "[parameters('systemTopicName')]",
       "location": "[parameters('location')]",
       "dependsOn": [
@@ -80,7 +80,7 @@
     },
     {
       "type": "Microsoft.EventGrid/systemTopics/eventSubscriptions",
-      "apiVersion": "2021-06-01-preview",
+      "apiVersion": "2020-04-01-preview",
       "name": "[parameters('eventSubName')]",
       "dependsOn": [
         "[resourceId('Microsoft.EventGrid/systemTopics', parameters('systemTopicName'))]",
