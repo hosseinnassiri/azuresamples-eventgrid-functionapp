@@ -25,7 +25,7 @@
     },
     "eventSubName": {
       "type": "string",
-      "defaultValue": "storagesubscription",
+      "defaultValue": "mystoragesubscription01",
       "metadata": {
         "description": "Provide a name for the Event Grid subscription."
       }
