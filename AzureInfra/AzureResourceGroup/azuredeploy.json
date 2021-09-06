@@ -23,6 +23,13 @@
         "description": "Provide name for storage account queue."
       }
     },
+    "eventGridTopicName": {
+      "type": "string",
+      "defaultValue": "myeventgridtopic01",
+      "metadata": {
+        "description": "Provide a name for the Event Grid Topic."
+      }
+    },
     "eventSubName": {
       "type": "string",
       "defaultValue": "mystoragesubscription01",
@@ -81,7 +88,7 @@
     {
       "type": "Microsoft.EventGrid/systemTopics/eventSubscriptions",
       "apiVersion": "2020-04-01-preview",
-      "name": "[parameters('eventSubName')]",
+      "name": "[concat(parameters('systemTopicName'), '/', parameters('eventSubName'))]",
       "dependsOn": [
         "[resourceId('Microsoft.EventGrid/systemTopics', parameters('systemTopicName'))]",
         "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageName'))]",
