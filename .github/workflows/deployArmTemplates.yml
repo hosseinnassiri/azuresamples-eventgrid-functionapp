@@ -21,7 +21,7 @@ jobs:
           subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
           resourceGroupName: ${{ secrets.AZURE_RG }}
           template: ./AzureInfra/AzureResourceGroup/azuredeploy.json
-          #parameters: storageAccountType=Standard_LRS
+          parameters: endpoint='GET-PREREQ-siteEventUri'
 
         # output containerName variable from template
       - run: echo ${{ steps.deploy.outputs.containerName }}
