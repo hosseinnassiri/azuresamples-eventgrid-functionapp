@@ -91,8 +91,7 @@
       "name": "[concat(parameters('systemTopicName'), '/', parameters('eventSubName'))]",
       "dependsOn": [
         "[resourceId('Microsoft.EventGrid/systemTopics', parameters('systemTopicName'))]",
-        "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageName'))]",
-        "[resourceId('Microsoft.Storage/storageAccounts/queueServices/queues', parameters('storageQueueName'))]"
+        "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageName'))]"
       ],
       "properties": {
         "destination": {
